@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>Cambio Immagine</title>
+</head>
+<body>
+    <img id="immagine" src="immagine1.jpg"alt ="Immagine">
+    <button onclick="cambiaImmagine()"> Cambia Immagine </button>
+
+    <script>
+        function cambiaImmagine() {
+            var immagine=document.getElementById("immagine");
+            console.log(immagine.src)
+            if(immagine.src.includes("immagine1.jpg")){
+                immagine.src="immagine2.webp";
+            }else{
+                immagine.src="immagine1.jpg";
+            }
+        }
+        </script>
+</body>
+</html>

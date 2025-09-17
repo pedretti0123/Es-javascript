@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aggiungere Elementi alla Lista</title>
+</head>
+<body>
+    <ul id="lista">
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+    </ul>
+    <button onclick="aggiungiElemento()">Aggiungi Elemento</button>
+    
+    <script>
+        function aggiungiElemnto() {
+            var lista=document.getElementById("lista");
+            var nuovoElemento= document.createElement("li");
+            nuovoElemento.textContent = "Nuovo Elemento";
+            lista.appendChild(nuovoElemento);
+    }
+    </script>
+</body>
+</html>
