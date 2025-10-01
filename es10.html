@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let messaggio = "globale";
+        function mostraMessaggio(){
+            let messaggio="valoreDiverso"
+            console.log(messaggio)
+        }
+        console.log(messaggio)
+        (function() {
+            console.log('Questa funzione viene eseguita subito!');
+            let segreto="12345"
+            console.log(segreto)
+        })();
+        console.log(segreto)
+    </script>
+</body>
+</html> 
