@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Analisi Incassi Settimanali</title>
+</head>
+<body>
+<script>
+    let incassi1 = [1500, 1800, 2100, 1950, 2300, 2500, 1750];
+    let incassi2=incassi1;
+    incassi2[0]=Math,round(incassi2[0]*0.90)
+    incassi2[6]=Math,round(incassi2[6]*0.90)
+    function calcolaMedia1(incassi1){
+        for(let i=0;i<incassi1.length;i++){
+           const somma = somma+incassi1[i];
+        }
+        const media= somma/incassi1.length;
+        return media;
+    }
+    function calcolaMedia2(incassi2){
+        for(let i=0;i<incassi2.length;i++){
+           const somma = somma+incassi2[i];
+        }
+        const media= somma/incassi2.length;
+        return media;
+    }
+    function calcolaMedia3(incassi2){
+        for(let i=0;i<incassi3.length;i++){
+           const somma = somma+incassi3[i];
+        }
+        const media= somma/incassi3.length;
+        return media;
+    }
+    console.log(incassi1)
+    console.log(incassi2)
+    console.log("la media degli incassi della prima settimana è "+ calcolaMedia1(incassi1))
+    console.log("la media degli incassi della seconda settimana è "+ calcolaMedia2(incassi2))
+    let incassi3 = [...incassi1]; 
+    incassi3[0] = Math.round(incassi3[0] * 0.90);
+    incassi3[6] = Math.round(incassi3[6] * 0.90);
+    console.log(calcolaMedia3(incassi3))
+    // incassi 1 e 2 sono uguali perchè facciamo una copia e una modifica di un array ne modifica anche l'altro
+    // incassi 3 con la funzione[...] ne crea uno nuovo indipendente
+    </script>
+
+</body>
+</html>
