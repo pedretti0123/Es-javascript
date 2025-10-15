@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aggiungere Elementi alla Lista</title>
+</head>
+<body>
+    <script>
+        function opera(){
+    var operazione=arguments[0];
+
+    var parametri = [];
+
+    var result = 0;
+    for (var i = 1; i< arguments.length; i++){
+        switch(operazione) {
+        case '+' :
+            result +=arguments[i];
+        break;
+            case '-':
+                result -=arguments[i];
+        break;
+            case '*' :
+                result *=arguments[i];
+        break;
+            case '/' :
+                result /=arguments[i];
+        break;
+            default:
+                result = 0;
+        }
+    }
+    return result;
+}
+console.log(opera('+',5,8,2,9))
+    </script>
+</body>
+</html>

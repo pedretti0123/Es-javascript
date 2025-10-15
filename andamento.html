@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aggiungere Elementi alla Lista</title>
+</head>
+<body>
+    <script>
+        function medie(){
+    let media1=arguments[0]
+    let media2=0
+    for (var i = 1; i< arguments.length; i++){
+        media2+=arguments[i]
+    }
+    media2=media2/(arguments.length-1)
+    console.log("media prima: "+media1+"/ media seconda "+ media2)
+}
+
+medie(7,6,8,3,9,5)
+    </script>
+</body>
+</html>
