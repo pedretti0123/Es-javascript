@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Analisi Incassi Settimanali</title>
+</head>
+<body>
+<script>
+function gestisciStudenti() {
+// Dati statici di esempio
+const studenti = [
+{nome: "Anna", mediaPrimo: 7, votiSecondo: [6, 5, 7, 6]},
+{nome: "Luca", mediaPrimo: 5.5, votiSecondo: [4, 5, 5]},
+{nome: "Marco", mediaPrimo: 6, votiSecondo: [6, 6, 5]},
+{nome: "Sara", mediaPrimo: 7, votiSecondo: [8, 7, 9]},
+];
+}
+let contA = 0; // media 2ª insufficiente
+let contB = 0; // insufficiente e inferiore
+let contC = 0; // sufficiente ma inferiore
+let contD = 0; // sufficiente e superiore
+for (let studente of studenti) {
+const [A, B] = confrontaMedie(studente.mediaPrimo, ...studente.votiSecondo);
+if(A==1 && B==0){
+    contA++;
+}
+else if(A==0 && B==1){
+    contB++;
+}
+else if(A==1 && B==1){
+    contC++;
+}
+else{
+    contD++;
+}
+}
+function confrontaMedie(){
+    media1=arguments[0];
+    media2=0;
+    for(let i=1;i<arguments.length;i++){
+        media2+=arguments[i];
+    }
+    media2=media2/(arguments.length-1);
+    if(media2<6){
+        if(media2<media1){
+            return [1,0]; // categoria B
+        } else {
+            return [1,1]; // categoria A
+        }
+    } else {
+        if(media2<media1){
+            return [0,0]; // categoria C
+        } else {
+            return [0,1]; // categoria D
+        }
+    }
+}
+function gestisciStudenti(){
+let sudenti=[]
+
+numero=Number("inserisci il numero degli studenti")
+for(let i=0;i<numero;i++){
+    let nuovoNome=prompt("inserisci il nuovo nome")
+    let media1=Number("ilserisci la media del primo")
+    let voti2=[];
+    num=Number("inserisci il numero degli studenti")
+    for(let x=0;x<num;x++){
+        media2[x]=Number(prompt("ilserisci il voto "+(x+1)))
+    }
+    studenti.push({
+        nome:nuovoNome,
+        mediaPrimo:media1,
+        votiSecondo:media2
+
+    }
+
+    )
+}
+}
+</script>
+</body>
+</html>
