@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<script>
+function Saldo(saldoIniziale, tipo, ...valori) {
+    let saldoCorrente = saldoIniziale;
+
+    for (const valore of valori) {
+        if (tipo === '+') {
+            saldoCorrente += valore; 
+        } else if (tipo === '-') {
+            saldoCorrente -= valore;
+        }
+    }
+    return saldoCorrente; 
+}
+
+function gestoreImprese() { 
+
+    let archivioImprese = [];
+    let procedi = 1; 
+    
+    do {
+        let nomeImpresa = prompt("Inserisci il nome della Impresa"); 
+        let saldoIniziale = Number(prompt("Inserisci il saldo iniziale in cassa"));
+        let operazione = prompt("Inserisci + o - per il tipo di movimento");
+        let numeroMovimenti = Number(prompt("Inserisci il numero di movimenti"));
+        let listaOperazioni = [];               
+        for (let i = 0; i < numeroMovimenti; i++) {
+            listaOperazioni.push(Number(prompt("Inserisci il valore del movimento " + (i + 1))));
+        }           
+        const nuovaImpresa = {
+            nome: nomeImpresa, 
+            saldo: saldoIniziale,
+            tipo: operazione,
+            Valori: listaMovimenti
+        };        
+        archivio.push(nuovaImpresa);           
+        let saldoFinale =Saldo(nuovaImpresa.saldo, nuovaImpresa.tipo, ...nuovaImpresa.Valori);        
+        console.log(`Saldo finale per ${nuovaImpresa.nome}: ${saldoFinale}`);        
+        procedi = Number(prompt("0 per terminare, 1 per continuare"));
+    } while (procedi === 1);   
+        console.log("Terminato", archivio);
+}
+
+
+
+gestoreImprese();
+</script>
+</body>
+</html>
