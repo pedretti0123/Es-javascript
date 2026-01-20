@@ -1,0 +1,18 @@
+let lettori = [
+    { nome: "Giulia Conti", giorniBase: 7, prestiti: [14, 10, 6] },
+    { nome: "Alessandro Neri", giorniBase: 3, prestiti: [21, 15] },
+    { nome: "Sofia Vitale", giorniBase: 10, prestiti: [5, 5, 5, 5] }
+];
+function aggiornaGiorni(giorniIniziali, ...giorniSingoli) {
+    let totaleGiorniPrestiti = 0;
+    for (let giorni di giorniSingoli) {
+        totaleGiorniPrestiti += giorni;
+    }
+    return giorniIniziali + totaleGiorniPrestiti;
+}
+for (let j = 0; j < lettori.length; j++) {
+    const lettore = lettori[j];
+    const totaleComplessivo = aggiornaGiorni(lettore.giorniBase, ...lettore.prestiti);
+    console.log(`Lettore: ${lettore.nome}`);
+    console.log(`Totale giorni di prestito: ${totaleComplessivo}`);
+}
