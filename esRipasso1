@@ -1,0 +1,20 @@
+let giocatori = [
+  { nome: "Marco Rinaldi", puntiBase: 120, prestazioni: [15, 20, 18, 22] },
+  { nome: "Elena Rossi", puntiBase: 150, prestazioni: [30, 10, 25] },
+  { nome: "Luca Bianchi", puntiBase: 90, prestazioni: [40, 45] }
+];
+function aggiornaPunti(punteggioBase, ...punteggiPartite) {
+    let totalePartite = 0;
+    for (let punteggio of punteggiPartite) {
+        totalePartite += punteggio;
+    }
+    
+    return punteggioBase + totalePartite;
+}
+for (let i = 0; i < giocatori.length; i++) {
+    const giocatore = giocatori[i]
+    const punteggioFinale = aggiornaPunti(giocatore.puntiBase, ...giocatore.prestazioni);  
+    console.log(`Giocatore: ${giocatore.nome}`);
+    console.log(`Punteggio totale: ${punteggioFinale}`);
+    console.log("-----------------------");
+}
